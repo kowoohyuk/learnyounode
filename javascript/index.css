@@ -70,6 +70,30 @@ h1 {
   width: 30rem;
   margin: 0 auto;
   margin-bottom: 3rem;
+  position: relative;
+}
+
+.game-board.end::before, .game-board.draw::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.game-board.end::after, .game-board.draw::after {
+  content: "END";
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: calc(50% - 1.5rem);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.game-board.draw::after {
+  content: "DRAW";
 }
 
 .game-board .row {
