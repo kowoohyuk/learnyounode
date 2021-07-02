@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  background-color: #2ac1bc;
+  margin: 0;
+  padding: 0 10vw;
+}
+
+h1 {
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 2px dotted #333;
+}
+
+@keyframes ani-bling {
+  0% {
+    filter: brightness(0);
+  }
+  25% {
+    filter: brightness(0.5);
+  }
+  50% {
+    filter: brightness(1);
+  }
+  75% {
+    filter: brightness(0.5);
+  }
+  100% {
+    filter: brightness(0);
+  }
+}
+
+.score-board {
+  display: grid;
+  grid-template-columns: 3rem 2rem 3rem;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.score-board > div {
+  background-color: transparent;
+  border: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.score-board > div:not(.score) {
+  line-height: 2.5rem;
+}
+
+.score-board .score.turn::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #fff;
+  left: 0;
+  animation: ani-bling 1s infinite;
+}
+
+.game-board {
+  width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.game-board .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  height: 5.5rem;
+}
+
+.game-board .row .block {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+.game-board .row .block.empty{
+  cursor: pointer;
+}
+.game-board .row .block.empty:hover {
+  background-color: #333;
+}
+
+.game-board .row:not(:last-child) {
+  border-bottom: 2px solid #333;
+}
+
+.game-board .row .block:not(:last-child) {
+  border-right: 2px solid #333;
+}
+
+.buttons {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 8rem);
+  grid-gap: 1rem;
+}
+
+.buttons button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 1rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.12s linear;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #2ac1bc;
+}
