@@ -27,7 +27,7 @@ const resetGame = () => {
 };
 
 const resetBoard = () => {
-  blocks.forEach(block => {
+  blocks.forEach((block) => {
     block.textContent = '';
     block.classList.add('empty');
   });
@@ -35,14 +35,15 @@ const resetBoard = () => {
   board.classList.remove('draw');
 };
 
-const resetScore = () => scores.forEach(score => score.textContent = 0);
+const resetScore = () => scores.forEach((score) => (score.textContent = 0));
 
 const endGame = () => board.classList.add('end');
 
-const drawGame = () => board.classList.add('draw');
+const drawGame = () =>
+  board.classList.has('end') || board.classList.add('draw');
 
 const handleBoard = ({ target }) => {
-  if (!(target.classList.contains('empty'))) {
+  if (!target.classList.contains('empty')) {
     return;
   }
   target.textContent = turn ? 'X' : 'O';
@@ -54,18 +55,22 @@ const checkGame = () => {
   let empty = 0;
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
-    if (blocks[a].textContent && blocks[a].textContent === blocks[b].textContent && blocks[a].textContent === blocks[c].textContent) {
+    if (
+      blocks[a].textContent &&
+      blocks[a].textContent === blocks[b].textContent &&
+      blocks[a].textContent === blocks[c].textContent
+    ) {
       handleScore();
       endGame();
       break;
     }
   }
   for (let i = 0; i < blocks.length; i++) {
-    if(blocks[i].classList.contains('empty')) {
+    if (blocks[i].classList.contains('empty')) {
       empty++;
     }
   }
-  if(!empty) {
+  if (!empty) {
     drawGame();
   }
   nextTurn();
@@ -75,8 +80,9 @@ const nextTurn = () => {
   scores[+turn].classList.toggle('turn');
   turn = !turn;
   scores[+turn].classList.toggle('turn');
-}
+};
 
-const handleScore = () => scores[+turn].textContent = Number(scores[+turn].textContent) + 1;
+const handleScore = () =>
+  (scores[+turn].textContent = Number(scores[+turn].textContent) + 1);
 
 init();
