@@ -1,0 +1,316 @@
+.header-banner {
+  background-color: rgb(18, 161, 234);
+}
+
+.header-banner > div {
+  width: 100%;
+  height: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-banner .header-banner__img--main {
+  width: 100%;
+  height: 100%;
+}
+
+.header-banner .header-banner__img--close {
+  width: 24px;
+  height: 24px;
+  top: calc(50% - 12px);
+  position: absolute;
+  cursor: pointer;
+}
+
+.header-gnb--top {
+  border-bottom: 1px solid rgb(221, 221, 221);
+  padding: 1rem 0;
+}
+
+.header-gnb--top > .flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-gnb--top ul {
+  display: flex;
+}
+
+.header-gnb--top ul li {
+  padding: 0px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: default;
+  position: relative;
+}
+
+.header-gnb--top ul li:first-child {
+  padding-left: 0;
+}
+
+.header-gnb--top ul li:last-child {
+  padding-right: 0;
+}
+
+.header-gnb--top ul a {
+  color: rgb(187, 187, 187);
+}
+
+.header-gnb--top ul span {
+  color: rgb(136, 136, 136);
+}
+
+.header-gnb--top ul li:not(:last-of-type)::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: -1px;
+  width: 1px;
+  height: 9px;
+  border-right: 1px solid rgb(221, 221, 221);
+}
+
+.header-gnb--bottom > .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  width: 100%;
+  height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-gnb--bottom__list--left {
+  display: flex;
+}
+
+.header-gnb--bottom__list--left a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(136, 136, 136);
+}
+
+.header-gnb--bottom__list--left li:not(:last-child) {
+  padding-right: 1rem;
+  position: relative;
+}
+
+.header-gnb--bottom__list--left li:not(.list__item--drawer)::after {
+  content: '';
+  position: absolute;
+  top: 0.625rem;
+  right: 6px;
+  width: 1px;
+  height: 1px;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 50%;
+}
+
+.header-gnb--bottom__list--left li:last-child::after {
+  display: none;
+}
+
+.header-gnb--bottom__list--left .list__item--drawer {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-right: 1rem;
+  font-weight: 600;
+  color: rgb(115, 103, 92);
+}
+
+.header-gnb--bottom__list--left .list__item--drawer::before {
+  margin-right: 4px;
+  position: relative;
+  display: inline-block;
+  content: ' ';
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAWJJREFUaAXt2r9Kw1AUx/FTNcT+QRTM6OSgi7uv4DO426nSR+gjFDtV0M0H0MVXcNZZEByKg8RBattLkibieM8gLe29yTfjCbf3dz4nBG6oCBcCCCCAAAIIILAigZq2z3B4Eby+ZGfafZfrhye1x3b72tgybtmKRe3tOdhJZHav3Xe5nmffz/N92jJu2IplrtFwmadb9Fa5CasvraTZnMnYPPg48aSRZ+dCAAEEEEAAAQQQQACBpQqon3h63e7utxk/LXW3Ff1YK2ic9vr9L9t26mlpasxmJtmRbZHrtSK7lrFy52Ea1h6FstQrN2H1pRVGUZzEH8c+Tjbci2Ifc5MZAQQQQAABBBBAwCsB9YvHVacTvsvk3Ktu/sIeyPbd5WAwtWVXDw+jNG2lIje2Ra7XRpIWf8axNly54yENu/64LpqvchNWX1qmXp/Ij7ldVHQd63+zr2Nj9kQAAQQQQOB/AnNLoUEKQvT/GQAAAABJRU5ErkJggg==);
+}
+
+.header-gnb--bottom__list--left .list__item--drawer::after {
+  position: absolute;
+  right: -1px;
+  width: 1px;
+  height: 12px;
+  content: ' ';
+  border-right: 1px solid rgb(238, 238, 238);
+}
+
+.header-gnb--bottom__main-img div {
+  text-align: center;
+}
+
+.header-gnb--bottom__main-img img {
+  width: 120px;
+  cursor: pointer;
+}
+
+.header-gnb--bottom__list--right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-gnb--bottom__list--right li {
+  font-size: 0.625rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 0.75rem;
+}
+
+.header-gnb--bottom__list--right li div {
+  position: relative;
+}
+
+.header-gnb--bottom__list--right li div::after {
+  content: '';
+  position: absolute;
+  top: 9px;
+  right: -11px;
+  width: 1px;
+  height: 20px;
+  border-right: 1px solid rgb(238, 238, 238);
+}
+
+.header-gnb--bottom__list--right li img {
+  width: 20px;
+  margin-bottom: 0.3125rem;
+}
+
+.header-gnb--bottom__list--right a {
+  font-weight: 600;
+}
+
+main {
+  background-color: rgb(246, 246, 246);
+}
+
+footer {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: rgb(136, 136, 136);
+  margin-bottom: 1.875rem;
+}
+
+.footer__header {
+  border-top: 2px solid rgb(221, 221, 221);
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.footer__header > div {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  color: #000;
+  padding: 0.75rem 0;
+}
+
+.footer__header a {
+  position: relative;
+  padding: 0 0.625rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer__header a:first-child {
+  padding-left: 0;
+}
+
+.footer__header a:not(:last-child)::after {
+  background: rgb(221, 221, 221);
+  width: 1px;
+  top: 0.3125rem;
+  right: 0;
+  height: 0.625rem;
+  content: '';
+  position: absolute;
+}
+
+.footer__main {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 5fr 4fr 1.5fr;
+  padding-top: 1.5rem;
+  font-weight: 400;
+  color: rgb(136, 136, 136);
+  line-height: 18px;
+}
+
+.footer__main .separator {
+  display: inline-block;
+  background: rgb(221, 221, 221);
+  width: 1px;
+  height: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer__main__left {
+  font-weight: 400;
+}
+
+.footer__main__left > div {
+  margin-bottom: 0.25rem;
+}
+
+.footer__main__left p {
+  margin-top: 1rem;
+  color: #333;
+}
+
+.footer__main__left span {
+  text-decoration: underline;
+}
+
+.footer__main__center {
+  padding: 0 4rem;
+}
+
+.footer__main__center > * {
+  margin-bottom: 0.25rem;
+}
+
+.footer__main__center h3 {
+  color: #333;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.footer__main__center span {
+  color: #333;
+  text-decoration: underline;
+}
+
+.footer__main__right h3 {
+  color: #333;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.footer__main__right > a {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.footer__main__right div {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.footer__main__right > *:last-child {
+  font-size: 0.625rem;
+}
